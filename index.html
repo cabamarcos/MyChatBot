@@ -160,7 +160,7 @@
             }
 
             addMessage(message, 'user');
-            $button.setAttribute('disabled', true);
+            $button.setAttribute('disabled', '');
 
             const userMessage = {
                 role: 'user',
@@ -184,16 +184,16 @@
                 const content = choice?.delta?.content ?? ""
                 reply += content
                 $botMessage.textContent = reply
-                console.log())
             }
+            
+            $button.removeAttribute('disabled');
 
             messages.push({
                 role: 'bot',
                 content: reply
             });
 
-            $button.removeAttribute('disabled');
-
+            $container.scrollTop = $container.scrollHeight;
         });
 
         function addMessage(text, sender) {
