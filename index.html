@@ -142,6 +142,9 @@
                 initProgressCallback: (info) =>{
                     console.log('initProgressCallback', info);
                     $info.textContent = `${info.text}%`;
+                    if (info.progress === 1){
+                        $button.removeAttribute('disabled');
+                    }
                 },   
             }
         );
@@ -205,7 +208,7 @@
 
     <form>
         <input type="text" placeholder="Escriba su mensaje aquí ...">
-        <button>Enviar</button>
+        <button disabled>Enviar</button>
     </form>
 
     <small>&nbsp;</small>
