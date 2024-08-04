@@ -189,7 +189,7 @@
             $button.removeAttribute('disabled');
 
             messages.push({
-                role: 'bot',
+                role: 'assistant',
                 content: reply
             });
 
@@ -199,19 +199,21 @@
         function addMessage(text, sender) {
             const clonedTemplate = $template.content.cloneNode(true);
             const $newMessage = clonedTemplate.querySelector('.message');
+
             const $who = $newMessage.querySelector('span');
             const $text = $newMessage.querySelector('p');
-
+            
             $text.textContent = text;
             $who.textContent = sender === 'bot' ? 'GPT' : 'Tú';
             $newMessage.classList.add(sender);
 
-            $message.appendChild(clonedTemplate);
-            //Actualizar el scroll
+            $message.appendChild($newMessage);
+
             $container.scrollTop = $container.scrollHeight;
 
             return $text;
         }
+
 
     </script>
 </head>
