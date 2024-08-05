@@ -23,3 +23,7 @@ The best model available is llama3. Change it doing this:
 ```JavaScript
 const SELECTED_MODEL = 'Llama-3-8B-Instruct-q4f32_1-MLC-1k'
 ```
+
+# TODO
+
+- Deploy it somewhere and create a database that stores the chats, making it possible to access your last chats.
