@@ -14,9 +14,9 @@ The model I used is Gemma, which is not good but its small. If you want to chang
 git clone https://github.com/cabamarcos/MyChatBot.git
 ```
 
-2. Open the file ./src/script.js
+2. Open the file script.js.
 
-3. Change the selected model with any model available in this [link](https://github.com/mlc-ai/web-llm/blob/main/src/config.ts)
+3. Change the selected model with any model available in this [link](https://github.com/mlc-ai/web-llm/blob/main/src/config.ts).
 
 The best model available is llama3. Change it doing this:
 
@@ -26,4 +26,4 @@ const SELECTED_MODEL = 'Llama-3-8B-Instruct-q4f32_1-MLC-1k'
 
 # TODO
 
-- Deploy it somewhere and create a database that stores the chats, making it possible to access your last chats.
+- Deploy it somewhere and create a database that stores the chats, making it possible to access your last conversations.
