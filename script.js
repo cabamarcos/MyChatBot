@@ -14,7 +14,7 @@ const $loading = $('.loading')
 let messages = []
 let end = false
 
-const SELECTED_MODEL = 'gemma-2b-it-q4f32_1-MLC'
+const SELECTED_MODEL = 'Llama-3-8B-Instruct-q4f32_1-MLC-1k'
 
 const engine = await CreateWebWorkerMLCEngine(
     new Worker('./worker.js', { type: 'module' }),
